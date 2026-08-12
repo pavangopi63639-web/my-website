@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#100812">
+<title>For Pavii ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="floatingHearts" aria-hidden="true"></div>
+
+<header class="topbar">
+  <span>FOR PAVII ❤️</span>
+  <button id="musicToggle" aria-label="Play music">♫</button>
+</header>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<main id="book" class="book" aria-live="polite">
+  <section class="page hero active" data-title="Start">
+    <div class="orb"></div>
+    <div class="page-inner hero-inner">
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/pavii-little.png" alt="Pavii as a little girl">
+        <span class="photo-spark">♡</span>
+      </div>
+      <p class="kicker">a little piece of my heart</p>
+      <h1>Pavii<span>…</span></h1>
+      <p class="hero-copy">Before you start,<br>put your earphones on. 🎧</p>
+      <button id="enter" class="pill">Tap to enter <span>❤️</span></button>
+      <p class="tiny">made only for you</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="Before I knew you">
+    <div class="page-inner">
+      <p class="kicker">chapter one</p>
+      <h2>Before I knew you…</h2>
+      <p class="body-copy">You were already someone's little world.</p>
+      <figure class="single-memory"><img src="assets/childhood-memory.png" alt="Pavii as a little girl"></figure>
+      <p class="caption">And somehow, that little girl grew up to become someone very special to me. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="And then you">
+    <div class="page-inner">
+      <p class="kicker">chapter two</p>
+      <h2>And then… there was you.</h2>
+      <div class="portrait-stack">
+        <figure class="big-photo"><img src="assets/photo-04.png" alt="Pavii"></figure>
+        <figure><img src="assets/photo-02.png" alt="Pavii outdoors"></figure>
+        <figure><img src="assets/photo-05.png" alt="Pavii"></figure>
+      </div>
+      <p class="caption">Different days. Different versions. Still the same person I adore.</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="Little things">
+    <div class="page-inner">
+      <p class="kicker">little things</p>
+      <h2>Things about you<br>I could never get tired of.</h2>
+      <div class="love-grid">
+        <button class="love-tile" data-text="That smile that can make everything feel lighter."><span>01</span><b>Your smile</b></button>
+        <button class="love-tile" data-text="The little expressions you make without even noticing."><span>02</span><b>Your little expressions</b></button>
+        <button class="love-tile" data-text="The way even an ordinary moment becomes memorable when it's you."><span>03</span><b>Your little moments</b></button>
+        <button class="love-tile" data-text="Simply… you being you. That's enough for me."><span>04</span><b>You.</b></button>
+      </div>
+      <p id="tileText" class="tile-text">Tap one. I'll tell you why. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page video-page" data-title="Moving memories">
+    <div class="page-inner video-inner">
+      <p class="kicker">moving memories</p>
+      <h2>Pictures can freeze a moment.<br>Videos bring it back.</h2>
+      <div class="video-stage">
+        <div class="video-count" id="videoCount">01 / 05</div>
+        <video id="memoryVideo" controls playsinline preload="auto">
+          <source id="memorySource" src="assets/video-01.mp4" type="video/mp4">
+        </video>
+        <button id="videoUnmute" class="video-unmute" hidden>🔊 Tap for video sound</button>
+      </div>
+      <div class="video-sequence" aria-label="Five memories">
+        <span class="video-dot active" data-video="0">01</span>
+        <span class="video-dot" data-video="1">02</span>
+        <span class="video-dot" data-video="2">03</span>
+        <span class="video-dot" data-video="3">04</span>
+        <span class="video-dot" data-video="4">05</span>
+      </div>
+      <div class="video-control-row">
+        <button id="videoPause" class="video-control">Ⅱ Pause</button>
+        <span id="videoLabel">memory one</span>
+      </div>
+      <p id="videoHint" class="caption">The five memories will play one after another. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="Your words">
+    <div class="page-inner">
+      <p class="kicker">one little memory</p>
+      <h2>You once wrote this for me.</h2>
+      <p class="body-copy">So I wanted to give your words a place in this little world too.</p>
+      <button class="letter-open" id="letterOpen">
+        <img src="assets/pavii-letter.png" alt="Handwritten letter">
+        <span>tap to hold it closer ❤️</span>
+      </button>
+      <div class="letter-note" id="letterNote"><p>Some words become memories the moment they're written. Yours did. ❤️</p></div>
+    </div>
+  </section>
+
+  <section class="page hand-memory-page" data-title="Our names">
+    <div class="page-inner">
+      <p class="kicker">one little memory</p>
+      <h2>You wrote our names here. ❤️</h2>
+      <p class="body-copy">A tiny thing, but somehow it means so much to me.</p>
+      <figure class="hand-memory">
+        <img src="assets/names-memory.png" alt="Pavii's hand with both our names written on it">
+      </figure>
+      <p class="caption">I don't think I'll ever forget this little memory. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page birthday-page" data-title="Birthday">
+    <div class="page-inner birthday-inner">
+      <p class="kicker">from me to you</p>
+      <h2>Happy Birthday,<br><span>my Pavii. ❤️</span></h2>
+      <div class="birthday-card">
+        <p>Today is your day, and I just want you to know how special you are to me.</p>
+        <p>I hope you smile a little more today, laugh a little louder, and feel just how loved you are.</p>
+        <p>I may not be able to be beside you and celebrate the way I wish I could, but I wanted to make you something you could keep — a tiny place on the internet that is just yours.</p>
+        <p>Every picture, every little moment, and every word here is my way of saying:<br><strong>I'm so happy that you exist.</strong></p>
+        <p class="birthday-signoff">Happy Birthday, baby. ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" data-title="Open when">
+    <div class="page-inner">
+      <p class="kicker">for the moments you need me</p>
+      <h2>Open when…</h2>
+      <div class="open-grid">
+        <button class="open-card" data-message="If you miss me, close your eyes for a second and imagine the biggest hug I could give you. 🫂">💗<span>you miss me</span></button>
+        <button class="open-card" data-message="Bad days don't get to decide how beautiful your life is. Take it slowly, baby. 🌙">🌙<span>you're having a bad day</span></button>
+        <button class="open-card" data-message="You don't need to do anything to deserve love. You are already enough. ❤️">🫂<span>you need a reminder</span></button>
+      </div>
+      <p id="openText" class="tile-text">Choose one. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="Someday">
+    <div class="page-inner">
+      <p class="kicker">not today… someday</p>
+      <h2>Things I wish I could give you.</h2>
+      <div class="future-list">
+        <div><span>🌹</span><b>Flowers</b><small>not through a screen</small></div>
+        <div><span>🫂</span><b>A real hug</b><small>the kind that lasts too long</small></div>
+        <div><span>📸</span><b>Our first picture</b><small>the one we don't have yet</small></div>
+        <div><span>🌃</span><b>A whole day together</b><small>with nowhere else to be</small></div>
+      </div>
+      <p class="body-copy">I can't give you all of these today… but someday, I hope I can. ❤️</p>
+    </div>
+  </section>
+
+  <section class="page" data-title="Secret">
+    <div class="page-inner">
+      <p class="kicker">you found the hidden part</p>
+      <h2>One last little secret.</h2>
+      <button id="secret" class="secret-heart">❤️</button>
+      <p id="secretText" class="secret-text">There is one more thing I want you to know…</p>
+    </div>
+  </section>
+
+  <section class="page finale" data-title="Happy Birthday">
+    <div class="orb final-orb"></div>
+    <div class="page-inner">
+      <p class="kicker">and finally…</p>
+      <h2>Happy Birthday,<br><span>My Pavii ❤️</span></h2>
+      <p class="body-copy">Distance may keep us apart today.<br>It doesn't have to keep my love away.</p>
+      <div class="final-hearts">♡ ❤️ ♡</div>
+      <p class="tiny">— made with love, just for you</p>
+    </div>
+  </section>
+</main>
+
+<nav class="page-nav" aria-label="Page navigation">
+  <button id="backBtn" class="nav-btn ghost">← Back</button>
+  <span id="pageNumber">01 / 11</span>
+  <button id="nextBtn" class="nav-btn">Next ❤️</button>
+</nav>
+
+<audio id="music" loop preload="auto"><source src="assets/website-music.mp3" type="audio/mpeg"></audio>
+<script src="script.js"></script>
+</body>
+</html>
